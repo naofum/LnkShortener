@@ -95,50 +95,57 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                if(error != null){
+                Context context = getApplicationContext();
+
+                int duration = Toast.LENGTH_SHORT;
+
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra(EXTRA_MESSAGE, originalUrl);
+                intent.putExtra(ERROR_BOOL, true);
+
+                try{
+
                     if(error.networkResponse.statusCode != 200) {
-                        Context context = getApplicationContext();
-                        CharSequence text = "Es ist ein Fehler aufgetreten.";
-                        int duration = Toast.LENGTH_SHORT;
 
-
-                        Intent intent = new Intent(context, MainActivity.class);
-                        intent.putExtra(EXTRA_MESSAGE, originalUrl);
-                        intent.putExtra(ERROR_BOOL, true);
 
                         if (error.networkResponse.statusCode == 400) {
                             Log.d("Error", "400");
-                            intent.putExtra(ERROR_MESSAGE, "Please enter a valid URL.");
+                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_valid_url));
                         }
                         if (error.networkResponse.statusCode == 401) {
                             Log.d("Error", "401");
-                            intent.putExtra(ERROR_MESSAGE, "API-Backend Unauthorized.");
+                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_unauthorized));
 
                         }
                         if (error.networkResponse.statusCode == 404) {
                             Log.d("Error", "404");
-                            intent.putExtra(ERROR_MESSAGE, "Try Again.");
+                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_404));
                         }
                         if (error.networkResponse.statusCode == 403) {
                             Log.d("Error", "403");
-                            intent.putExtra(ERROR_MESSAGE, "You have exceeded your quota.");
+                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_quota));
 
                         }
                         if (error.networkResponse.statusCode == 500) {
                             Log.d("Error", "500");
-                            intent.putExtra(ERROR_MESSAGE, "Internal Server Error.");
+                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_internal));
 
                         }
 
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
-
-                        startActivity(intent);
-                        finish();
 
                     }
 
+                } catch (Exception e){
+                    Log.d("Error", e.toString());
+
                 }
+
+                Toast toast = Toast.makeText(context,  R.string.error_toast, duration);
+                toast.show();
+
+                startActivity(intent);
+                finish();
+
             }
         });
 
@@ -180,11 +187,8 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         Uri webpage = Uri.parse(shortUrl);
         Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
 
-        // Always use string resources for UI text.
-        // This says something like "Share this photo with"
-        String title = getResources().getString(R.string.chooser_title);
         // Create intent to show chooser
-        Intent chooser = Intent.createChooser(webIntent, title);
+        Intent chooser = Intent.createChooser(webIntent, getResources().getString(R.string.open_chooser_title));
 
 // Verify the intent will resolve to at least one activity
         if (webIntent.resolveActivity(getPackageManager()) != null) {
@@ -226,5 +230,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+        finish();
     }
+
 }

@@ -74,5 +74,17 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
 
+    <!-- Strings for MainActivity -->
+    <string name="shorten">SHORTEN</string>
+
+    <!-- Strings for DisplayShortenedUrlActivity -->
+    <string name="error_toast">An error occured.</string>
     <string name="chooser_title">Share this Link via</string>
+    <string name="error_valid_url">Please enter a valid URL.</string>
+    <string name="error_unauthorized">API-Backend Unauthorized.</string>
+    <string name="error_404">Try Again.</string>
+    <string name="error_quota">You have exceeded your quota.</string>
+    <string name="error_internal">Internal Server Error.</string>
+    <string name="open_chooser_title">Open this link via</string>
+
 </resources>

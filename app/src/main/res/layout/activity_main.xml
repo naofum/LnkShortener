@@ -32,7 +32,7 @@
         android:textAlignment="center" />
 
     <Button
-        android:text="Shorten"
+        android:text="@string/shorten"
         android:layout_width="wrap_content"
         android:id="@+id/shortenButton"
         android:textSize="24sp"
