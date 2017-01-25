@@ -1,5 +1,20 @@
 package de.hirtenstrasse.michael.lnkshortener;
 
+// Copyright (C) 2017 Michael Achmann
+
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+//
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -65,9 +80,9 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         }
 
         final TextView viewShortenedUrl = (TextView) findViewById(R.id.textViewShortenedLink);
-        final Button shareButton = (Button) findViewById(R.id.shareButton);
-        final Button openLinkButton = (Button) findViewById(R.id.openLinkButton);
-        final Button copyLinkButton = (Button) findViewById(R.id.copyLinkButton);
+        final ImageButton shareButton = (ImageButton) findViewById(R.id.shareButton);
+        final ImageButton openLinkButton = (ImageButton) findViewById(R.id.openLinkButton);
+        final ImageButton copyLinkButton = (ImageButton) findViewById(R.id.copyLinkButton);
         final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         try {
             encodedOriginalUrl = URLEncoder.encode(originalUrl, "utf-8");
@@ -103,6 +118,8 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                 intent.putExtra(EXTRA_MESSAGE, originalUrl);
                 intent.putExtra(ERROR_BOOL, true);
 
+                Log.d("Network Error:", error.toString());
+
                 try{
 
                     if(error.networkResponse.statusCode != 200) {
@@ -110,25 +127,25 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
 
                         if (error.networkResponse.statusCode == 400) {
                             Log.d("Error", "400");
-                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_valid_url));
+                            intent.putExtra(ERROR_MESSAGE, getString(R.string.error_valid_url));
                         }
                         if (error.networkResponse.statusCode == 401) {
                             Log.d("Error", "401");
-                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_unauthorized));
+                            intent.putExtra(ERROR_MESSAGE, getString(R.string.error_quota));
 
                         }
                         if (error.networkResponse.statusCode == 404) {
                             Log.d("Error", "404");
-                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_404));
+                            intent.putExtra(ERROR_MESSAGE, getString(R.string.error_404));
                         }
                         if (error.networkResponse.statusCode == 403) {
                             Log.d("Error", "403");
-                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_quota));
+                            intent.putExtra(ERROR_MESSAGE, getString(R.string.error_unauthorized));
 
                         }
                         if (error.networkResponse.statusCode == 500) {
                             Log.d("Error", "500");
-                            intent.putExtra(ERROR_MESSAGE, getResources().getText(R.string.error_internal));
+                            intent.putExtra(ERROR_MESSAGE, getString(R.string.error_internal));
 
                         }
 
@@ -140,7 +157,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
 
                 }
 
-                Toast toast = Toast.makeText(context,  R.string.error_toast, duration);
+                Toast toast = Toast.makeText(context,  getString(R.string.error_toast), duration);
                 toast.show();
 
                 startActivity(intent);
@@ -153,8 +170,6 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         queue.start();
 
 
-        //     viewShortenedUrl.setText(originalUrl);
-
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -165,7 +180,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, shortUrl);
             sendIntent.setType("text/plain");
-            startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.chooser_title)));
+            startActivity(Intent.createChooser(sendIntent, getString(R.string.chooser_title)));
 
     }
 
@@ -175,9 +190,8 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         clipboard.setPrimaryClip(clip);
 
         Context context = getApplicationContext();
-        CharSequence text = "Link copied to Clipboard.";
         int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
+        Toast toast = Toast.makeText(context, getString(R.string.copied_to_clipboard), duration);
         toast.show();
 
 
@@ -188,7 +202,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
 
         // Create intent to show chooser
-        Intent chooser = Intent.createChooser(webIntent, getResources().getString(R.string.open_chooser_title));
+        Intent chooser = Intent.createChooser(webIntent, getString(R.string.open_chooser_title));
 
 // Verify the intent will resolve to at least one activity
         if (webIntent.resolveActivity(getPackageManager()) != null) {

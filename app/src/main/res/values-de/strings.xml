@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LnkShortener</string>
+    <string name="chooser_title">Link teilen via</string>
+    <string name="error_404">Probier es nochmal.</string>
+    <string name="error_internal"></string>
+    <string name="error_quota">Du hast dein Kontingent überschritten.</string>
+    <string name="error_toast">Es ist ein Fehler aufgetreten.</string>
+    <string name="error_unauthorized">API-Backend nicht autorisiert.</string>
+    <string name="error_valid_url">Bitte gib eine gültige URL ein.</string>
+    <string name="open_chooser_title">Link öffnen via</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="copied_to_clipboard">In Zwischenablage kopiert</string>
+    <string name="shorten">KÜRZEN</string>
+</resources>
