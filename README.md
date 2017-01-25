@@ -3,7 +3,7 @@
 LnkShortener is an android app which makes use of the API provided by a [Polr](https://github.com/Cydrobolt/polr) installation. You can enter the endpoint of your own Polr installation as well as an API-key. 
 
 
-##License 
+## License 
 > Copyright (C) 2017 Michael Achmann
 
 >This program is free software: you can redistribute it and/or modify
