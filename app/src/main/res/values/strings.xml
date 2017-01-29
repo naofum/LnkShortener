@@ -1,78 +1,6 @@
 <resources>
     <string name="app_name">LnkShortener</string>
-    <string name="title_activity_settings">Settings</string>
-
-    <!-- Strings related to Settings -->
-
-    <!-- Example General settings -->
-    <string name="pref_header_general" translatable="false">General</string>
-
-    <string name="pref_title_social_recommendations" translatable="false">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations" translatable="false">Recommendations for people to contact
-        based on your message history
-    </string>
-
-    <string name="pref_title_display_name" translatable="false">Display name</string>
-    <string name="pref_default_display_name" translatable="false">John Smith</string>
-
-    <string name="pref_title_add_friends_to_messages" translatable="false">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
-
-    <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync" translatable="false">Data &amp; sync</string>
-
-    <string name="pref_title_sync_frequency" translatable="false">Sync frequency</string>
-    <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
-        <item>-1</item>
-    </string-array>
-
-    <string-array name="list_preference_entries">
-        <item>Entry 1</item>
-        <item>Entry 2</item>
-        <item>Entry 3</item>
-    </string-array>
-
-    <string-array name="list_preference_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
-    <string-array name="multi_select_list_preference_default_value" />
-
-    <string name="pref_title_system_sync_settings" translatable="false">System sync settings</string>
-
-    <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications" translatable="false">Notifications</string>
-
-    <string name="pref_title_new_message_notifications" translatable="false">New message notifications</string>
-
-    <string name="pref_title_ringtone" translatable="false">Ringtone</string>
-    <string name="pref_ringtone_silent" translatable="false">Silent</string>
-
-    <string name="pref_title_vibrate" translatable="false">Vibrate</string>
+    <string name="activity_settings">Settings</string>
 
     <!-- Strings for MainActivity -->
     <string name="shorten">SHORTEN</string>
@@ -84,8 +12,12 @@
     <string name="error_unauthorized">API-Backend Unauthorized.</string>
     <string name="error_404">Try Again.</string>
     <string name="error_quota">You have exceeded your quota.</string>
-    <string name="error_internal" translatable="false">Internal Server Error.</string>
+    <string name="error_internal">Internal Server Error.</string>
+    <string name="error_misc">Please check your Polr settings!</string>
     <string name="open_chooser_title">Open this link via</string>
     <string name="copied_to_clipboard">Copied to Clipboard</string>
+
+    <string name="activity_display_url">Shortened URL</string>
+
 
 </resources>
