@@ -19,5 +19,7 @@
 
     <string name="activity_display_url">Shortened URL</string>
 
+    <string name="settings_domain">Set Domain</string>
+    <string name="settings_api_key">Set API key</string>
 
 </resources>

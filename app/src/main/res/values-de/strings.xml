@@ -14,4 +14,6 @@
     <string name="activity_settings">Einstellungen</string>
     <string name="activity_display_url">Gekürzte URL</string>
     <string name="error_misc">Bitte überprüfe deine Polr Einstellungen!</string>
+    <string name="settings_api_key">API-Schlüssel</string>
+    <string name="settings_domain">Domain</string>
 </resources>

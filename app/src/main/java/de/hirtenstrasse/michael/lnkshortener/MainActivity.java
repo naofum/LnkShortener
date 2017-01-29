@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Finally MainFragment is added to the main container
         transaction.replace(R.id.fragment_container, mainFragment);
-        transaction.addToBackStack(null);
         transaction.commit();
 
     }
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     // If the URL is valid this function adds e.g. http:// (the protocol) to the URL, if missing
     public String guessUrl(String url){
         String returnurl = URLUtil.guessUrl(url);
-        Log.d("GuessedUrl:", returnurl);
+
         return returnurl;
     }
 

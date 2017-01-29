@@ -5,12 +5,12 @@
         android:defaultValue="https://1n.pm"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="Set Domain"
+        android:title="@string/settings_domain"
         android:key="url" />
     <EditTextPreference
         android:defaultValue="8a4a2c54d582048c31aa85baaeb3f8"
         android:selectAllOnFocus="true"
         android:singleLine="true"
-        android:title="Set API-Key"
+        android:title="@string/settings_api_key"
         android:key="api_key" />
 </PreferenceScreen>

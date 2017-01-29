@@ -111,7 +111,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
 
         } else {
             // Received the Intent from a foreign App
-            Log.d("OrigUrl From Intent", intent.getStringExtra(Intent.EXTRA_TEXT));
+
             originalUrl = intent.getStringExtra(Intent.EXTRA_TEXT);
         }
 
@@ -125,7 +125,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         // Assembles the URL and starts the API-Request
         String url = apiUrl+"/api/v2/action/shorten?key="+apiKey+"&url=" + encodedOriginalUrl;
        // String url = " https://1n.pm/api/v2/action/shorten?key=8a4a2c54d582048c31aa85baaeb3f8&url=" + encodedOriginalUrl;
-        Log.d("URL:", url);
+
 
         // Actual Request to the API
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -145,7 +145,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                         openLinkButton.setVisibility(View.VISIBLE);
                         copyLinkButton.setVisibility(View.VISIBLE);
 
-                        Log.d("Response:", response);
+
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -155,9 +155,6 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                 Context context = getApplicationContext();
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context,  getString(R.string.error_toast), duration);
-
-                // Logging..
-                Log.d("Network Error:", error.toString());
 
                 // Whatever happened we want to return to the start Activity. If possible with
                 // some information about what went wrong. Therefore we can already set the Intent up
@@ -175,32 +172,32 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
 
                         switch (error.networkResponse.statusCode){
                             case 400:
-                                Log.d("Error", "400");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_valid_url));
                                 break;
 
                             case 401:
-                                Log.d("Error", "401");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_quota));
                                 break;
 
                             case 404:
-                                Log.d("Error", "404");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_404));
                                 break;
 
                             case 403:
-                                Log.d("Error", "403");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_unauthorized));
                                 break;
 
                             case 500:
-                                Log.d("Error", "500");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_internal));
                                 break;
 
                             default:
-                                Log.d("Error", "Misc.");
+
                                 intent.putExtra(ERROR_MESSAGE, getString(R.string.error_misc));
 
                         }
@@ -212,7 +209,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                 } catch (Exception e){
                     // If this happened we are hopefully yet debugging and will receive some information
                     // about the kind of the error.
-                    Log.d("Error", e.toString());
+                   e.printStackTrace();
 
                 }
 
