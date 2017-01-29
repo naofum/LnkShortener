@@ -1,4 +1,6 @@
 # LnkShortener
+[![Build Status](https://travis-ci.org/michaelachmann/LnkShortener.svg?branch=master)](https://travis-ci.org/michaelachmann/LnkShortener)
+
 ## An android app for shortening links via  [Polr](https://github.com/Cydrobolt/polr) API
 LnkShortener is an android app which makes use of the API provided by a [Polr](https://github.com/Cydrobolt/polr) installation. You can enter the endpoint of your own Polr installation as well as an API-key. 
 
