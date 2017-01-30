@@ -44,4 +44,4 @@ On the wiki there is a [ToDos Page](/wiki/ToDo) which states the next goals for 
 >The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.
 
 ### Material Icons
->We have made these icons available for you to incorporate them into your products under the Apache License Version >2.0. Feel free to remix and re-share these icons and documentation in your products. We'd love attribution in your >app's about screen, but it's not required. The only thing we ask is that you not re-sell these icons.
+>We have made these icons available for you to incorporate them into your products under the Apache License Version 2.0. Feel free to remix and re-share these icons and documentation in your products. We'd love attribution in your app's about screen, but it's not required. The only thing we ask is that you not re-sell these icons.
