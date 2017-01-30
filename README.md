@@ -1,12 +1,12 @@
-# LnkShortener
+##<img src="/icons/LnkShortenerRobo114.png">
 [![Build Status](https://travis-ci.org/michaelachmann/LnkShortener.svg?branch=master)](https://travis-ci.org/michaelachmann/LnkShortener) [![Licence](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
-[Getting Started](#getting-started) [Obtain the App](#obtain-app) [Contribute](#contribute)
+**[Getting Started](#getting-started) | [App Stores](#app-stores) | [Contribute](#contribute)**
 
 ## Getting Started
 LnkShortener is an android app which makes use of the API provided by a [Polr](https://github.com/Cydrobolt/polr) installation. You can enter the endpoint of your own Polr installation as well as an API-key. You can [Download the binary](releases/tag/1.0) and install it on your android smartphone, clone the source and compile it for yourself or find it on the [Google Play Store](https://1n.pm/lnkshortener).
 
-## Obtain the app
+## App Stores
 LnkShortener is at the moment available on <br />
 <a href='https://1n.pm/lnkshortener'>
 <img alt='Get it on Google Play' height='100' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
