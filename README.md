@@ -5,7 +5,7 @@
 **[Getting Started](#getting-started) | [App Stores](#app-stores) | [Contribute](#contribute)**
 
 ## Getting Started
-LnkShortener is an android app which makes use of the API provided by a [Polr](https://github.com/Cydrobolt/polr) installation. You can enter the endpoint of your own Polr installation as well as an API-key. You can [Download the binary](releases/tag/1.0) and install it on your android smartphone, clone the source and compile it for yourself or find it on the [Google Play Store](https://1n.pm/lnkshortener).
+LnkShortener is an android app which makes use of the API provided by a [Polr](https://github.com/Cydrobolt/polr) installation. You can enter the endpoint of your own Polr installation as well as an API-key. You can [Download the binary](https://github.com/michaelachmann/LnkShortener/releases/tag/1.0) and install it on your android smartphone, clone the source and compile it for yourself or find it on the [Google Play Store](https://1n.pm/lnkshortener).
 
 ## App Stores
 LnkShortener is at the moment available on <br />
@@ -15,7 +15,7 @@ LnkShortener is at the moment available on <br />
 <a href='https://1n.pm/lnk_amzn'><img alt='Get it on the Amazon App Store' src='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-underground-app-us-black.png'></a>
 
 ## Contribute
-On the wiki there is a [ToDos Page](/wiki/ToDo) which states the next goals for following releases. If you want to contribute send pull requests, help out finding bugs or send me a pm for the coordination of jobs.
+On the wiki there is a [ToDos Page](https://github.com/michaelachmann/LnkShortener/wiki/ToDo) which states the next goals for following releases. If you want to contribute send pull requests, help out finding bugs or send me a pm for the coordination of jobs.
 
 ## License 
 > Copyright (C) 2017 Michael Achmann
