@@ -1,6 +1,6 @@
 # LnkShortener
-<img src="/icons/LnkShortenerRobo114.png">
-[![Build Status](https://travis-ci.org/michaelachmann/LnkShortener.svg?branch=master)](https://travis-ci.org/michaelachmann/LnkShortener) [![Licence](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://img.shields.io/badge/license-GPLv3-blue.svg)
+<img src="/icons/LnkShortenerRobo512.png" height="114">
+<!-- [![Build Status](https://travis-ci.org/michaelachmann/LnkShortener.svg?branch=master)](https://travis-ci.org/michaelachmann/LnkShortener) //--> [![Licence](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
 **[Getting Started](#getting-started) | [App Stores](#app-stores) | [Contribute](#contribute)**
 
