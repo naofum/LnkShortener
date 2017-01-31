@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mainToolbar);
 
-        // Perparing Fragment
+        // Preparing Fragment
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
         // MainFragment is the start screen
@@ -166,6 +166,23 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
 
+            case R.id.action_history:
+                // Perparing Fragment
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                // MainFragment is the start screen
+                LinkHistoryFragment linkHistoryFragment = new LinkHistoryFragment();
+
+                // Finally MainFragment is added to the main container
+                transaction.replace(R.id.fragment_container, linkHistoryFragment);
+                transaction.addToBackStack("");
+                transaction.commit();
+
+
+
+
+
+
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
@@ -173,7 +190,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
-
-
 
 }
