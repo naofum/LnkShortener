@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">LnkShortener</string>
+
+    <!-- String for Menu in MainActivity -->
+    <string name="action_bug">Report a Bug</string>
     <string name="activity_settings">Settings</string>
+    <string name="action_history">History</string>
 
     <!-- Strings for MainActivity -->
     <string name="shorten">SHORTEN</string>

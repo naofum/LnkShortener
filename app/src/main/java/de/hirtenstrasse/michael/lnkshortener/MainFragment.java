@@ -20,6 +20,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -33,6 +34,15 @@ public class MainFragment extends Fragment {
 
         // Since might want to alter some values in the layout we need the Inflater as a variable
         View myInflater =  inflater.inflate(R.layout.fragment_main, container, false);
+
+        // Adding the Github Buttons
+        WebView webview = (WebView) myInflater.findViewById(R.id.webViewGithub);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.setBackgroundColor(0x00000000);
+
+
+        webview.loadUrl("file:///android_asset/github.html");
+
 
         // If errors have been passed to the Activity they can be injected into the Fragment at this
         // position. That's why we first check for errors and thereafter alter the Labels in the layout

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/mainFrame"
     android:layout_height="match_parent"
     tools:context="de.hirtenstrasse.michael.lnkshortener.MainFragment">
 
@@ -63,6 +64,16 @@
             android:textAlignment="center"
             android:onClick="shortenLink"/>
 
+
     </LinearLayout>
+
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        app:layout_anchor="@+id/mainFrame"
+        app:layout_anchorGravity="bottom|end"
+        android:id="@+id/webViewGithub" />
 
 </FrameLayout>

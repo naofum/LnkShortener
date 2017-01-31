@@ -17,6 +17,7 @@ package de.hirtenstrasse.michael.lnkshortener;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -153,6 +154,15 @@ public class MainActivity extends AppCompatActivity {
                 // Starts the SettingsActivity
                 Intent intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);
+
+                return true;
+
+            case R.id.action_bug:
+
+                String url = "https://github.com/michaelachmann/LnkShortener/issues/new";
+                Intent intentBug = new Intent(Intent.ACTION_VIEW);
+                intentBug.setData(Uri.parse(url));
+                startActivity(intentBug);
 
                 return true;
 
