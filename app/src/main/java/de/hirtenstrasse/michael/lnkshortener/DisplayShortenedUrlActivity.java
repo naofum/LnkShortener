@@ -20,6 +20,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
@@ -28,6 +29,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +43,8 @@ import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+
+import net.glxn.qrgen.android.QRCode;
 
 
 public class DisplayShortenedUrlActivity extends AppCompatActivity {
@@ -76,6 +80,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
         final ImageButton openLinkButton = (ImageButton) findViewById(R.id.openLinkButton);
         final ImageButton copyLinkButton = (ImageButton) findViewById(R.id.copyLinkButton);
         final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        final ImageView qrCodeImageView = (ImageView) findViewById(R.id.imageViewQrCode);
 
         // Setting up Toolbar
         Toolbar mainToolbar = (Toolbar) findViewById(R.id.main_toolbar);
@@ -125,12 +130,22 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
                         // We set the shortened URL as Label
                         viewShortenedUrl.setText(shortUrl);
 
+                        // Generate QR-Code for ShortLink
+                        Bitmap qrCode = QRCode.from(shortUrl)
+                                .withSize(500,500)
+                                .withColor(0xFF000000, 0x00000000)
+                                .bitmap();
+
+                        // Set QRCode ad Image
+                        qrCodeImageView.setImageBitmap(qrCode);
+
                         // Now we hide the loading-spinner and set the Buttons and Texts as vissible
                         progressBar.setVisibility(View.GONE);
                         viewShortenedUrl.setVisibility(View.VISIBLE);
                         shareButton.setVisibility(View.VISIBLE);
                         openLinkButton.setVisibility(View.VISIBLE);
                         copyLinkButton.setVisibility(View.VISIBLE);
+                        qrCodeImageView.setVisibility(View.VISIBLE);
 
 
                     }
