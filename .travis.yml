@@ -17,6 +17,9 @@ licenses:
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
     
+before_install:
+    - chmod +x gradlew
+   
 env:
   global:
    # install timeout in minutes (2 minutes by default)
