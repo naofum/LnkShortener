@@ -33,6 +33,10 @@ On the wiki there is a [ToDos Page](https://github.com/michaelachmann/LnkShorten
 >You should have received a copy of the GNU General Public License
 >along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+## Dependencies
+
+* For QRCode support LnkShortener depends on [QRGen](https://github.com/kenglxn/QRGen), which is licensed under Apache 2.0
+
 ## Legal Attributions
 ### Google Play Logo
 >Google Play and the Google Play logo are trademarks of Google Inc.
