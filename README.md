@@ -9,10 +9,13 @@ LnkShortener is an android app which makes use of the API provided by a [Polr](h
 
 ## App Stores
 LnkShortener is at the moment available on <br />
-<a href='https://1n.pm/lnkshortener'>
-<img alt='Get it on Google Play' height='100' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
-<br>
-<a href='https://1n.pm/lnk_amzn'><img alt='Get it on the Amazon App Store' src='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-underground-app-us-black.png'></a>
+<div style="height:100px; vertical-align: middle;">
+<a href='https://1n.pm/lnkshortener'> <img style="vertical-align: middle;" alt='Get it on Google Play' height='100' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+
+<a href='https://1n.pm/lnk_amzn'><img style="vertical-align: middle;" height="66" alt='Get it on the Amazon App Store' src='https://images-na.ssl-images-amazon.com/images/G/01/mobile-apps/devportal2/res/images/amazon-underground-app-us-black.png'></a>
+    <a href="https://1n.pm/f-droid"><img style="vertical-align: middle;" src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"></a>
+
+</div>
 
 ## Contribute
 On the wiki there is a [ToDos Page](https://github.com/michaelachmann/LnkShortener/wiki/ToDo) which states the next goals for following releases. If you want to contribute send pull requests, help out finding bugs or send me a pm for the coordination of jobs.
