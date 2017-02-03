@@ -31,6 +31,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/progressBar" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@mipmap/ic_image"
+            android:id="@+id/imageViewQrCode"
+            android:visibility="gone"/>
+
     <TextView
         android:text="1n.pm/"
         android:layout_width="match_parent"
@@ -47,7 +55,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
 
         <ImageButton
@@ -101,14 +109,6 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="bottom|center_horizontal"
-        app:srcCompat="@mipmap/ic_image"
-        android:id="@+id/imageViewQrCode"
-        android:visibility="gone"
-        android:layout_weight="1" />
 
 
 </FrameLayout>

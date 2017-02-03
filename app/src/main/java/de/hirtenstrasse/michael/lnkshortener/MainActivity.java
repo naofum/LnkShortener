@@ -170,10 +170,10 @@ public class MainActivity extends AppCompatActivity {
                 // Perparing Fragment
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
-                // MainFragment is the start screen
+                // LinkHistoryFragment is the start screen
                 LinkHistoryFragment linkHistoryFragment = new LinkHistoryFragment();
 
-                // Finally MainFragment is added to the main container
+                // Finally LinkHistoryFragment is added to the main container
                 transaction.replace(R.id.fragment_container, linkHistoryFragment);
                 transaction.addToBackStack("");
                 transaction.commit();

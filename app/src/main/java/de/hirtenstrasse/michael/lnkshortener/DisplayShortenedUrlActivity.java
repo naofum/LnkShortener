@@ -132,7 +132,7 @@ public class DisplayShortenedUrlActivity extends AppCompatActivity {
 
                         // Generate QR-Code for ShortLink
                         Bitmap qrCode = QRCode.from(shortUrl)
-                                .withSize(500,500)
+                                .withSize(250,250)
                                 .withColor(0xFF000000, 0x00000000)
                                 .bitmap();
 
