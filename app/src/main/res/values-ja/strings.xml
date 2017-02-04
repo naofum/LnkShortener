@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">LnkShortener</string>
+    <string name="activity_settings">設定</string>
+
+    <!-- Strings for MainActivity -->
+    <string name="shorten">短縮</string>
+
+    <!-- Strings for DisplayShortenedUrlActivity -->
+    <string name="error_toast">エラーが発生しました。</string>
+    <string name="chooser_title">このリンクを共有...</string>
+    <string name="error_valid_url">正しい URL を入力してください。</string>
+    <string name="error_unauthorized">API バックエンドが認証されていません。</string>
+    <string name="error_404">もう一度やり直してください。</string>
+    <string name="error_quota">割り当てを超過しました。</string>
+    <string name="error_internal">内部サーバーエラー。</string>
+    <string name="error_misc">Polr の設定を確認してください!</string>
+    <string name="open_chooser_title">このリンクを開く...</string>
+    <string name="copied_to_clipboard">クリップボードにコピーしました</string>
+
+    <string name="activity_display_url">短縮した URL</string>
+
+    <string name="settings_domain">ドメインを設定</string>
+    <string name="settings_api_key">API キーを設定</string>
+
+</resources>
